@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+
+    height: auto;
+    background-color: rgba(96, 148, 19, 0.979);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.shoes {
+    font-size: 30px;
+    text-align: center;
+    margin: 5px;
+    height: 7vh;
+    width: 12vw;
+    display: inline-block;
+    background-color: rgb(219, 241, 201);
+  }
+  
+  .outerwear {
+    font-size: 30px;
+    text-align: center;
+    height: 7vh;
+    width: 12vw;
+    margin: 5px;
+    display: inline-block;
+    background-color: rgb(219, 241, 201);
+  }
+
+ul {
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .submenu {
+    list-style: none;
+    width: 12vw;
+    display: none;
+    position: absolute;
+    background-color: rgba(161, 187, 121, 0.979); 
+  }
+  
+  .shoes:hover > .submenu,
+  .outerwear:hover > .submenu {
+    display: block;
+  
+  }
+  
+  .submenu > li:hover > ul {
+    list-style: none;
+    display: block;
+  }
+
+  .submenu li {
+    position: relative;
+  }
+  
+  .submenu li:hover {
+    background-color: rgba(170, 222, 93, 0.979);
+  }
+  
+  .sub-submenu {
+    display: none;
+    position:relative;
+    width:fit-content;
+    background-color: white;
+    border: 1px solid black;
+    left: 100%;
+  }
+  
+  .submenu li:hover > .sub-submenu {
+    display: block;
+  }
+
+  
+  .sub-submenu > li {
+    width: 100%;
+    white-space:nowrap;
+  }
+  
+  .sub-submenu > span {
+    display: block;
+    padding: 5px;
+  }
+  
+  .sub-submenu > span:hover {
+    background-color: rgba(170, 222, 93, 0.979);
+  }

@@ -1,0 +1,24 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+}
+
+input {
+    height: 2em;
+    color: green;
+}
+
+input:hover {
+    color: red;
+}
+
+#button:hover {
+    border-width: 1px;
+    border-color: black;
+    background-color:rgb(230, 230, 230);
+}
+
+#search {
+    width: 100%;
+    padding-left: 10px;
+}

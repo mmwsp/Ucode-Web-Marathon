@@ -1,0 +1,19 @@
+.result_view{
+    display: none;
+    background-color: rgb(197, 194, 194);
+    width: 700px;
+}
+
+.data{
+    margin: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+#age{
+    width: 50px;
+}
+
+#form{
+    width: 700px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Table Viewer</title>
+  <link rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>CSV Table Viewer</h1>
+  <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".csv">
+    <input type="submit" value="Upload CSV">
+  </form>
+
+  <div id="filter-container">
+    <input type="text" id="filter-input" placeholder="Filter by column">
+    <button id="filter-button">Filter</button>
+  </div>
+
+  <div id="table-container">
+    <!-- Table will be inserted here -->
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
+

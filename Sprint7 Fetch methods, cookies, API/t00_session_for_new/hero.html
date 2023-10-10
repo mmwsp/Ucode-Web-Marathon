@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Session for new</h1>
+        <div id="post">
+            <div class="card">
+                <span>name : <span id="name"></span> </span> <br>
+                <span>alias : <span id="superhero"></span> </span> <br>
+                <span>age : <span id="age"></span> </span> <br>
+                <span>description : <span id="description"></span> </span> <br>
+                <span>photo : <span id="photo"></span> </span> <br>
+                <span>experience : <span id="exp"></span> </span> <br>
+                <span>level : <span id="level"></span> </span> <br>
+                <span>purpose : <span id="purpose"></span> </span> <br>
+                <br><br><br>
+                
+            </div>
+            <form action="/hero" method="POST">
+                <fieldset id="buttons">
+                    <input type="submit" value="FORGET">
+                </fieldset>
+            </form>
+        </div>
+        <script>
+            
+            let names = document.getElementById('name');
+            let superHeroname = document.getElementById('superhero');
+            let age = document.getElementById('age');
+            let description =  document.getElementById('description');
+            let photos = document.getElementById('photo');
+            let exps = document.getElementById('exp'); 
+            let levels = document.getElementById('level');
+            let purposes = document.getElementById('purpose');
+
+            let request = new XMLHttpRequest()
+            request.open('GET', '/hero', true);
+            request.setRequestHeader( 'Content-Type', 'application/json');
+            request.addEventListener('load', function () {
+
+                let receivedUser = JSON.parse(request.response);
+                console.log(receivedUser);
+                names.innerText = receivedUser.realName;
+                superHeroname.innerText = receivedUser.SuperheroName;
+                age.innerText = receivedUser.age;
+                description.innerText = receivedUser.description;
+                photos.innerText = receivedUser.photo;
+                exps.innerText = receivedUser.exp;
+                levels.innerText = receivedUser.levelControl;
+                purposes.innerText = receivedUser.radio;
+
+            });
+            request.send();
+            
+        </script>
+</body>
+</html>

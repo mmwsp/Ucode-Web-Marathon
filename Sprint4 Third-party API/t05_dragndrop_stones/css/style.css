@@ -1,0 +1,57 @@
+.main
+{
+    display: flex;
+}
+
+.stones
+{
+    float: left;
+    position: absolute;
+    height: 60px;
+    top: 15%;
+    width: 60px;
+    margin: 10px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.stones[value="off"]
+{
+    border: 2px dashed rgb(0, 0, 0);
+}
+
+#st1
+{
+    left: 2%;
+    background-color: rgb(205, 26, 26);
+}
+
+#st2
+{
+    left: 10%;
+    background-color: rgb(23, 189, 23);
+}
+
+#st3
+{
+    left: 20%;
+    background-color: rgb(40, 40, 230);
+}
+
+#st4
+{
+    left: 30%;
+    background-color: rgb(252, 252, 55);
+}
+
+#st5
+{
+    left: 40%;
+    background-color: rgb(252, 172, 24);
+}
+
+#st6
+{
+    left: 50%;
+    background-color: rgb(225, 15, 225);
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Handbook</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Handbook">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <br>
+        <h1 id="heading">Handbook</h1>
+        <br>
+        <h2 id="heading">HTML</h2>
+        <br>
+        <ul class="html-grid">
+            <li class="block">
+                <p id="description">
+                    h1<br>
+                    The h1 to h6 tags are used to define HTML headings<br>align<br>
+                    <code>&lt;h1&gt;Title&lt;/h1&gt;</code>
+                </p>
+                <p class="title">Title</p>
+            </li>
+            <li class="block">
+              <p id="description">
+                  div<br>
+                  defines a division or a section in an HTML document<br>align,title<br>
+                  <code>&lt;div&gt;...&lt;/div&gt;</code>
+              </p>
+              <p id="lorem">Lorem ipsum.</p>
+          </li>
+            <li class="block">
+                <p id="description">
+                    hr<br>
+                    Draws a horizontal line.<br><br>
+                    <code>&lt;hr&gt;</code>
+                    <br>
+                    <hr>
+                    Above and under you see the horizontal line, that are drawn using hr. <br>
+                    <hr>
+                </p>
+            </li>
+            <li class="block">
+                <p id="description">
+                    main<br>
+                    specifies the main content of a document<br>---<br>
+                    <code>&lt;main&gt;&lt;/main&gt;</code>
+                </p>
+            </li>
+        </ul>
+        <br>
+        <h2 id="heading">CSS</h2>
+        <br>
+        <ul class="html-grid">
+          <li class="block">
+              <p id="description">
+                  Font size<br>
+                 Specifies whe size of font<br><br>
+                  font-size:24px;
+                  <h4>Here is font size</h4>
+              </p>
+          </li>
+          <li class="block">
+            <p id="description">
+                opacity<br>
+                defines an opacity of the element<br><br>
+                opacity: 0.5; <br>
+                <p class="opc">opacity check</p>
+            </p>
+        </li>
+          <li class="block">
+              <p id="description">
+                  background color<br>
+                  Specifies background color.<br><br>
+                  background-color: red;
+                  <br>
+                <div class="back"></div>
+              </p>
+          </li>
+          <li class="block">
+              <p id="description">
+                  border<br>
+                  specifies the border of the element<br><br>
+                  border: 2px solid black;
+                  <div class="bord"></div>
+              </p>
+          </li>
+      </ul>
+      <br>
+
+      <h2 id="heading">Protocols</h2>
+      <br>
+      <div class="method-grid">
+        <div class="mblock">
+          <h3>IP</h3> 
+          <p id="description">
+            To determine an IP address, you can follow these steps:
+            <br><br>
+            Open a command prompt on your computer.
+            Type "ipconfig" and press Enter.
+            Look for the "IPv4 Address" line under the network adapter you're currently using. This will display the IP address of your computer on that network.
+            Alternatively, you can visit a website that will display your public IP address, such as "whatismyip.com" or "ipchicken.com". These websites will show you the public IP address.
+        </p>
+        </div>
+
+        <div class="mblock">
+          <h3>DNS</h3> 
+          <p id="description">
+            DNS records are used to translate domain names into IP addresses, allowing computers to locate servers on the internet. Here is a brief description of some common DNS record types:
+            <br><br>
+            A Record: This is the most common type of DNS record, and it maps a domain name to an IP address.
+            <br><br>
+            AAAA Record: Similar to A records, but used for IPv6 addresses.
+            <br><br>
+            MX Record: This record maps a domain name to the mail exchange servers that are responsible for handling email messages sent to that domain.
+            <br><br>
+            CNAME Record: This is an alias record that maps one domain name to another. It is often used for subdomains or to create a shorter, easier-to-remember URL.
+            <br><br>
+            TXT Record: This record can contain any arbitrary text and is often used for verification or authentication purposes.
+            <br><br>
+            SRV Record: This record is used to specify the location of a service on a domain, such as a specific port for a particular protocol.
+            <br><br>
+            NS Record: This record specifies the authoritative name servers for a domain.
+            <br><br>
+            These are just a basic of the many types of DNS records that exist. Each record type serves a specific purpose in the DNS system.
+        </div>
+
+        <div class="mblock">
+          <h3>HTTP methods</h3> 
+          <p id="description">
+            HTTP methods are used to indicate the action to be performed on a resource identified by a URI. Here's a description of each HTTP method:
+            <br><br>
+            GET: Requests a representation of a resource. It retrieves information from the server without changing the state of the resource.
+            <br><br>  
+            POST: Submits an entity to the specified resource, often causing a change in state or side effects on the server.
+            <br><br>
+              PUT: Replaces the entity of the specified resource with the new one provided in the request payload.
+            <br><br>
+            DELETE: Deletes the specified resource.
+            <br><br>
+            HEAD: Requests the header of a resource, without retrieving the actual representation of the resource.
+            <br><br>
+            OPTIONS: Requests information about the communication options available for the specified resource.
+            <br><br>
+            CONNECT: Converts the request connection to a transparent TCP/IP tunnel.
+            <br><br>
+            TRACE: Echoes back the received request, allowing clients to see what intermediate servers are changing or adding to the request.
+            <br><br>
+            PATCH: Partially modifies the specified resource by applying a set of changes specified in the request payload.
+        </div>
+
+        <div class="mblock">
+          <h3>HTTP status codes</h3> 
+          <p id="description">
+            HTTP status codes are three-digit numbers returned by a server to indicate the status of a client's request. Here are some common HTTP status codes and their meanings:
+            <br><br>
+            200 OK: The request was successful, and the server has returned the requested data.
+            <br>
+            201 Created: The server has successfully created a new resource.
+            <br>
+            204 No Content: The server has fulfilled the request, but there is no new information to send back.
+            <br><br>
+            400 Bad Request: The server could not understand the request due to invalid syntax.
+            <br>
+            401 Unauthorized: The client does not have proper authentication credentials for the resource.
+            <br>
+            403 Forbidden: The client is authenticated, but does not have access to the requested resource.
+            <br>
+            404 Not Found: The server cannot find the requested resource.
+            <br><br>
+            500 Internal Server Error: The server encountered an error while processing the request.
+            <br>
+            503 Service Unavailable: The server is currently unavailable due to maintenance or overload.
+            <br>
+          </p>
+        </div>
+
+      </div>
+    </body>
+</html>

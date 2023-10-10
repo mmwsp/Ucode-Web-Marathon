@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notes with cookies</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="main"> 
+        <div class="btns">
+            <button onclick="addToLocalStorage()" id="add" class="add"><p>Add to local storage</p></button>
+            <button onclick="clearLocalStorage()" id="clear" class="clear"><p>Clear from local storage</p></button>
+        </div>
+        <br>
+        <div class="inpt">
+            <input id="txt" placeholder="enter note" type="text"/>
+        </div>
+        <h4>Notes archive:</h4>
+        <div id="hist">
+            <div id="h_text"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

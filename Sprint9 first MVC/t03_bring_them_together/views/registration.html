@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registration</h1>
+    <div class="formDiv">
+        
+        <form name="registration">
+            <div id="error"></div>
+
+            <input class="inputLabel" required type="text" name="login" placeholder="Login" size="25"><br>
+            <input class="inputLabel" required type="password" name="password" placeholder="Password" size="25"><br>
+            <input class="inputLabel" required type="password" name="confirmPass" placeholder="Confirm password" size="25"><br>
+            <input class="inputLabel" required type="text" name="fullName" placeholder="Full Name" size="25"><br>
+            <input class="inputLabel" required type="email" name="email" placeholder="E-mail" size="25"><br>
+            <br>
+            
+        </form>
+    </div>
+    <div class="forBtns">
+        <input id="subm" type="submit" value="signup">
+        <p>Already have account? Then:</p>
+        <input id="login" type="submit" value="login">
+    </div>
+
+    <br>
+    <div id="message-container"></div>
+
+    <script>
+        let sendButton = document.getElementById('subm');
+        let logButton = document.getElementById('login');
+
+        logButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = '/login';
+        })
+
+
+        sendButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            let regform = document.forms['registration'];
+
+            let login =  regform.elements['login'].value;
+            let password = regform.elements['password'].value;
+            let fullName = regform.elements['fullName'].value;
+            let email = regform.elements['email'].value;
+            let check = regform.elements['confirmPass'].value;
+
+            if(password != check) {
+                document.getElementById('error').innerText = 'Password mismatch!';
+            }
+            if (!validateForm()) {
+                alert('Fields must be not empty and contain minimum 3 characters.');
+            }
+            else if (password === check && validateForm()) {
+                let user = JSON.stringify({
+                login: login,
+                password: password,
+                fullName: fullName,
+                email: email,
+            })
+
+            let request = new XMLHttpRequest()
+            request.open('POST', '/registration', true);
+            request.setRequestHeader( 'Content-Type', 'application/json');
+            request.addEventListener('load', function () {
+                    let res = JSON.parse(request.response);
+                    console.log(res.status);
+                    const messageContainer = document.getElementById('message-container');
+
+                    if (res.status == 'SUCCESS') {
+                        document.getElementById('error').innerHTML = '';
+                        messageContainer.innerHTML = '';
+                        const successMessage = document.createElement('div');
+                        successMessage.textContent = 'Account was successfully registered';
+                        messageContainer.appendChild(successMessage);
+                        window.location.href = '/main';
+                    }
+                    else {
+                        document.getElementById('error').innerHTML = '';
+                        messageContainer.innerHTML = '';
+                        const errorMessage = document.createElement('div');
+                        errorMessage.textContent = 'Registration error';
+                        messageContainer.appendChild(errorMessage);
+                    }
+
+                });
+            request.send(user);
+            }
+
+        })
+
+        function validateForm() {
+            let regform = document.forms['registration'];
+            let login = regform.elements['login'].value;
+            let password = regform.elements['password'].value;
+            let fullName = regform.elements['fullName'].value;
+            let email = regform.elements['email'].value;
+            let check = regform.elements['confirmPass'].value;
+
+            if (login.length < 3 || password.length < 3 || fullName.length < 3 || email.length < 3 || check.length < 3) {
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>

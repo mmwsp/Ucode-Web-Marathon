@@ -1,0 +1,26 @@
+.place {
+    width: 100vw;
+    margin-top: 50vh;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(13, 118, 13);
+    border-radius: 50%;
+    background-color: rgba(32, 196, 32, 0.788);
+    display: block;
+    animation: shake 2s ease-out alternate infinite;
+    float: left;
+    transition: 2s cubic-bezier(.17,.67,.83,.67);
+    transition-property: background-color;
+}
+
+.circle:hover {
+    background-color: red;
+}
+@keyframes shake {
+    100% {
+        transform: translateX(calc(100vw - 200px));
+    }
+}

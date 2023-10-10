@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Load Count</title>
+  <script src="/script.js"></script>
+</head>
+<body>
+  <h1>Page Load Count</h1>
+  <p id="pageLoadCount">Page loaded <!--REPLACE_ME--> times in the last minute.</p>
+
+  <script>
+    const pageLoadCountElement = document.getElementById('pageLoadCount');
+    const pageLoadCount = parseInt(getCookie('pageLoadCount')) || 0;
+    pageLoadCountElement.innerHTML = `Page loaded ${pageLoadCount} times in the last minute.`;
+  </script>
+</body>
+</html>

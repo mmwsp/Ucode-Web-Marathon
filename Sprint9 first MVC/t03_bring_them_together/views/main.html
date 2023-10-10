@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Main</h1>
+    <div class="mainDiv">
+        <p>You are in your personal cabinet.</p>
+         <p id="role">Your role is: user.</p>
+    </div>
+    <p>Want to change your name?</p>
+    <div id="message-container"></div>
+    <br>
+    <div class="formDiv">
+        <form name="change">
+            <div id="error"></div>
+            <input class="inputLabel" required type="text" name="fullName" placeholder="New Name" size="25"><br>
+            <br>
+            
+        </form>
+    </div>
+    <di class="forBtns">
+        <input id="subm" type="submit" value="Сhange">
+    </div>
+
+
+    <br><br><br>
+    <input id="logout" type="submit" value="Log out">
+
+    <script>
+        let logoutButton = document.getElementById('logout');
+        let submButton = document.getElementById('subm');
+
+        submButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            let regform = document.forms['change'];
+            let newName =  regform.elements['fullName'].value;
+            let user = JSON.stringify({
+                newData: newName,
+                field: "fullName",
+            })
+            let request = new XMLHttpRequest()
+            request.open('POST', '/changeData', true);
+            request.setRequestHeader( 'Content-Type', 'application/json');
+            request.addEventListener('load', function () {
+                    let res = JSON.parse(request.response);
+                    const messageContainer = document.getElementById('message-container');
+
+                    if (res.status == 'SUCCESS') {
+                        document.getElementById('error').innerHTML = '';
+                        messageContainer.innerHTML = '';
+                        const successMessage = document.createElement('div');
+                        successMessage.textContent = 'Your name is successfully changed.';
+                        messageContainer.appendChild(successMessage);
+                    }
+                    else {
+                        document.getElementById('error').innerHTML = '';
+                        messageContainer.innerHTML = '';
+                        const errorMessage = document.createElement('div');
+                        errorMessage.textContent = 'Error occured during changing.';
+                        messageContainer.appendChild(errorMessage);
+                    }
+
+                });
+            request.send(user);
+        })
+        
+        
+
+        logoutButton.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let request = new XMLHttpRequest()
+            request.open('GET', '/logout', true);
+            request.setRequestHeader( 'Content-Type', 'application/json');
+            request.send();
+            window.location.href = '/';
+            })
+    </script>
+
+</body>
+</html>

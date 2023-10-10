@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+
+.japan {
+    width: 17vw;
+    height: 20vh;
+    margin: 0 auto;
+    background: radial-gradient(circle, #ac2131 60px, #fff 62px);
+    border: 2px solid #cacaca;
+
+}

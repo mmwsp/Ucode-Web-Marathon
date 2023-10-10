@@ -1,0 +1,36 @@
+.main {
+    width:50vw;
+    display: block;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+}
+
+.add{
+    background-color: #65cecb;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.add:hover {
+    background-color: #438482;
+}
+
+.clear {
+    background-color: rgb(175, 101, 101);
+}
+
+.clear:hover {
+    background-color: rgb(106, 61, 61);
+}
+
+button{
+    height: 4em;
+    width: 11em;
+    border-radius: 7%;
+    border: none;
+    
+}

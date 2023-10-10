@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Charset</title>
+</head>
+
+<body>
+    
+    <h1>Charset</h1>
+
+    <div>
+        <form name="options">
+            <label for="inputString">Change charset:</label>
+            <input id="inputString" type="text" name="inputString" placeholder="input string"><br><br>
+    
+            <label for="choose">Select charset or several charsets:</label>
+            <select multiple id="choose" name="choose">
+                <option value="utf" selected>UTF-8</option>
+                <option value="iso-8859-1">ISO-8859-1</option>
+                <option value="cp1252">Windows-1252</option>
+            </select>
+    
+            <button id="submit" type="submit">Change charset</button>
+            <input type="reset" id="clear" value="Clear">
+        </form>
+    </div>
+
+    <div class="hidden" style="display: none">
+        <label for="input">Input string: </label>
+        <textarea name="input" id="input"></textarea>
+    </div>
+    <div class="hidden" style="display: none">
+        <label for="utf">UTF-8: </label>
+        <textarea name="utf" id="utf"></textarea>
+    </div>
+    <div class="hidden" style="display: none">
+        <label for="iso">ISO-8859-1: </label>
+        <textarea name="iso" id="iso" placeholder="asd"></textarea>
+    </div>
+    <div class="hidden" style="display: none">
+        <label for="win">Windows-1252: </label>
+        <textarea name="win" id="win"></textarea>
+    </div>
+
+    <script src="script.js"></script>    
+</body>
+
+</html>

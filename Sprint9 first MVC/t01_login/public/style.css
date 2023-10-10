@@ -1,0 +1,50 @@
+.logDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.inputLabel {
+    margin-top: 15px;
+}
+
+#error {
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#subm {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    height: 3.5vh;
+    width: 5vw;
+    border-radius: 7px;
+}
+
+#logout {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    height: 3.5vh;
+    width: 5vw;
+    border-radius: 7px;
+}

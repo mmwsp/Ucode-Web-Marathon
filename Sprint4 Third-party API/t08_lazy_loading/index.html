@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lazy loading</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="t08. Lazy loading">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Lazy loading</h1>
+<div class="info">
+    <label><span id="num">2</span> images loaded from 20</label>
+</div>
+<div class="list">
+    <div>
+        <img src="https://st.depositphotos.com/1658611/1273/i/600/depositphotos_12736747-stock-photo-clouds-with-blue-sky.jpg" width="800" height="500" alt="">
+    </div>
+    <div>
+        <img src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" width="800" height="500" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" width="800" height="500" data-src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://st.depositphotos.com/1658611/1273/i/600/depositphotos_12736747-stock-photo-clouds-with-blue-sky.jpg" width="800" height="500" alt="">
+    </div>
+    <div>
+        <img src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" width="800" height="500" alt="">
+    </div>
+
+    <div>
+        <img class="lazy" src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" width="800" height="500" data-src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://img5.goodfon.ru/wallpaper/nbig/d/20/nebo-zakat-oblaka.jpg" width="800" height="500" data-src="https://img5.goodfon.ru/wallpaper/nbig/d/20/nebo-zakat-oblaka.jpg" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" width="800" height="500" data-src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" alt="">
+    </div>b 
+    <div>
+        <img class="lazy" src="https://img5.goodfon.ru/wallpaper/nbig/d/20/nebo-zakat-oblaka.jpg" width="800" height="500" data-src="https://img5.goodfon.ru/wallpaper/nbig/d/20/nebo-zakat-oblaka.jpg" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" width="800" height="500" data-src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://phonoteka.org/uploads/posts/2021-04/1618576121_18-phonoteka_org-p-fon-nebo-s-oblakami-dlya-fotoshopa-24.jpg" width="800" height="500" data-src="https://phonoteka.org/uploads/posts/2021-04/1618576121_18-phonoteka_org-p-fon-nebo-s-oblakami-dlya-fotoshopa-24.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://st.depositphotos.com/1658611/1273/i/600/depositphotos_12736747-stock-photo-clouds-with-blue-sky.jpg" width="800" height="500" alt="">
+    </div>
+    <div>
+        <img src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" width="800" height="500" alt="">
+    </div>
+
+    <div>
+        <img src="https://st.depositphotos.com/1658611/1273/i/600/depositphotos_12736747-stock-photo-clouds-with-blue-sky.jpg" width="800" height="500" alt="">
+    </div>
+    <div>
+        <img src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" width="800" height="500" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" width="800" height="500" data-src="https://img3.goodfon.ru/wallpaper/nbig/f/3c/nebo-oblaka-zakat-6252.jpg" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://img5.goodfon.ru/wallpaper/nbig/d/20/nebo-zakat-oblaka.jpg" width="800" height="500" data-src="https://img5.goodfon.ru/wallpaper/nbig/d/20/nebo-zakat-oblaka.jpg" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" width="800" height="500" data-src="https://oboitd.ru/images/goods/big/20200123092930_Oblaka_7-028.jpg" alt="">
+    </div>
+    <div>
+        <img class="lazy" src="https://phonoteka.org/uploads/posts/2021-04/1618576121_18-phonoteka_org-p-fon-nebo-s-oblakami-dlya-fotoshopa-24.jpg" width="800" height="500" data-src="https://phonoteka.org/uploads/posts/2021-04/1618576121_18-phonoteka_org-p-fon-nebo-s-oblakami-dlya-fotoshopa-24.jpg" alt="">
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
